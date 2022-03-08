@@ -50,6 +50,9 @@ e o tempo que o agendador irá rodar.
 As APIs terão uma classe chamada `CacheServiceWrapper` que atuará como um orquestrador entre os caches local e distribuído, conforme 
 configurado na variável `redis-enabled`.
 
+Para o cache local, terá um agendador com Spring Scheduler e no Node com a biblioteca Node-scheduler, que irá rodar a cada 1 minuto
+para procurar por chaves expiradas.
+
 ## Requisitos
 
 É necessário possuir as seguintes ferramentas:
@@ -100,7 +103,7 @@ Em sequência, para executar o CLI do Redis, rode o comando:
 
 Existe apenas 1 endpoint em cada API, sendo este:
 
-**/api/v1/cep/{cep}
+**/api/v1/cep/{cep}**
 
 Buscando CEPs na API em Java Spring WebFlux:
 
