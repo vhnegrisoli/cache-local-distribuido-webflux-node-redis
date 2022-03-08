@@ -10,9 +10,11 @@ Recentemente, criei meu canal no YouTube chamado [Comics & Code](https://www.you
 * Programação (Java, Javascript, Python, Node, etc)
 * Desenvolvimento de projetos e tutoriais
 
-![Logo Canal](https://github.com/vhnegrisoli/integracao-apis-star-wars/blob/master/Comics%20%26%20Code.png)
+![Logo Canal](https://github.com/vhnegrisoli/cache-local-distribuido-webflux-node-redis/blob/master/img/Logo%20Nova%20Fundo%20Preto_00000.png)
 
 Este será o segundo projeto do canal, será uma playlist com um total de 9 vídeos.
+
+Link da Playlist do projeto: https://www.youtube.com/playlist?list=PLTnZgkfXPBX5uJSZxIVMPbNxNXfdRu15p
 
 ## Objetivos
 
@@ -37,6 +39,8 @@ https://viacep.com.br/
 ## Arquitetura
 
 A arquitetura desenhada foi a representada na imagem abaixo:
+
+![Arquitetura](https://github.com/vhnegrisoli/cache-local-distribuido-webflux-node-redis/blob/master/img/Arquitetura.png)
 
 Consiste em 2 APIs, uma com Spring WebFlux que irá rodar na porta 8080 e uma em Node.js que rodará na porta 8081.
 
@@ -76,6 +80,22 @@ Para rodar os serviços Node.js, rode o comando:
 
 Poderá acessar em: http://localhost:8081 
 
+Para executar o `Redis` no Windows, abra o arquivo:
+
+`redis-server.exe`
+
+Em sequência, para executar o CLI do Redis, abra o arquivo:
+
+`redis-cli.exe`
+
+No Linux, execute:
+
+`redis-server`
+
+Em sequência, para executar o CLI do Redis, rode o comando:
+
+`redis-cli`
+
 ## Acessando o endpoint
 
 Existe apenas 1 endpoint em cada API, sendo este:
@@ -102,6 +122,34 @@ Resposta:
   "uf": "SP"
 }
 ```
+
+## Visualizando os logs
+
+É possível visualizar os logs nas aplicações Java e Node via terminal:
+
+![Logs](https://github.com/vhnegrisoli/cache-local-distribuido-webflux-node-redis/blob/master/img/Logs%20Cache.png)
+
+Ou também, é possível visualizar direto no Redis:
+
+Para acessar o Redis, no Linux, rode o comando:
+
+`redis-cli`
+
+Para salvar manualmente uma chave:
+
+`set NOME_CHAVE VALOR_DESEJADO`
+
+Para visualizar todas as chaves:
+
+`keys *`
+
+Para visualizar apenas uma chave:
+
+`get NOME_CHAVE`
+
+Exemplo:
+
+![Logs Redis](https://github.com/vhnegrisoli/cache-local-distribuido-webflux-node-redis/blob/master/img/Logs%20Redis.png)
 
 Espero que tenham gostado!
 
